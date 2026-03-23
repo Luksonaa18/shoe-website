@@ -67,7 +67,9 @@ const Login = () => {
             })}
           />
           {errors.password && (
-            <p className="text-red-400 text-sm mt-1">{errors.password.message}</p>
+            <p className="text-red-400 text-sm mt-1">
+              {errors.password.message}
+            </p>
           )}
         </div>
 
