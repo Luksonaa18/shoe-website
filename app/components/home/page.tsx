@@ -187,7 +187,7 @@ const HomePage = () => {
         <div
           ref={leftShoeRef}
           className="absolute z-10"
-          style={{ left: "18%", bottom: "10%", width: "360px" }}
+          style={{ left: "18%", bottom: "10%", width: "260px" }}
         >
           <Image
             src={shoe}
@@ -203,7 +203,7 @@ const HomePage = () => {
         <div
           ref={rightShoeRef}
           className="absolute z-10 scale-x-[-1]"
-          style={{ right: "18%", bottom: "10%", width: "360px" }}
+          style={{ right: "18%", bottom: "10%", width: "260px" }}
         >
           <Image
             src={shoe}
