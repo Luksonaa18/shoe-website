@@ -85,7 +85,7 @@ const Footer = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Stride
+                Tes shoes
               </span>
               <p
                 className="mt-3 text-sm leading-relaxed max-w-xs"
@@ -95,39 +95,6 @@ const Footer = () => {
                 the bold. Every pair tells a story — make it yours.
               </p>
             </div>
-
-            {/* Newsletter */}
-            <div>
-              <p
-                className="text-xs uppercase tracking-widest mb-3 font-semibold"
-                style={{ color: "rgba(255,255,255,0.3)" }}
-              >
-                Stay in the loop
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-1 px-4 py-2.5 rounded-xl text-sm outline-none"
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    color: "rgba(255,255,255,0.7)",
-                  }}
-                />
-                <button
-                  className="px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95"
-                  style={{
-                    background: "linear-gradient(135deg, #ff6b35, #e63946)",
-                    color: "#fff",
-                  }}
-                >
-                  Join
-                </button>
-              </div>
-            </div>
-
-            {/* Socials */}
             <div className="flex gap-3">
               {socials.map((s) => (
                 <a
@@ -202,7 +169,7 @@ const Footer = () => {
             className="text-xs"
             style={{ color: "rgba(255,255,255,0.2)" }}
           >
-            © 2026 Stride. All rights reserved.
+            © 2026 Tes Shoes. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">
@@ -225,23 +192,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-
-          {/* Payment icons (decorative) */}
-          <div className="flex items-center gap-2">
-            {["VISA", "MC", "AMEX", "PYPL"].map((p) => (
-              <span
-                key={p}
-                className="px-2 py-1 rounded text-[10px] font-bold tracking-wide"
-                style={{
-                  background: "rgba(255,255,255,0.06)",
-                  color: "rgba(255,255,255,0.25)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
-                {p}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -257,7 +207,7 @@ const Footer = () => {
           fontFamily: "'Georgia', serif",
         }}
       >
-        STRIDE
+        TES SHOES
       </div>
 
       {/* Marquee keyframe */}

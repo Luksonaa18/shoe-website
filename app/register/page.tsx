@@ -98,6 +98,9 @@ const Register = () => {
         >
           {registerMutation.isPending ? "Registering..." : "Register"}
         </button>
+        <div className="w-full items-center justify-center text-center">
+          <button className="text-sm text-blue-400 underline cursor-pointer" onClick={()=>router.push('/login')}> გაქვს ექაუნთი ?</button>
+        </div>
       </form>
     </div>
   );

@@ -28,6 +28,7 @@ const Header = () => {
     { href: "/", label: "მთავარი", num: "01" },
     { href: "/profile", label: "პროფილი", num: "02" },
     { href: "/about", label: "ჩვენს შესახებ", num: "03" },
+    { href: "/cart", label: "კალათა", num: "04" },
   ];
 
   const ease: [number, number, number, number] = [0.76, 0, 0.24, 1];

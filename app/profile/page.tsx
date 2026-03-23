@@ -22,7 +22,9 @@ const ProfilePage = () => {
   if (isPending) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-neutral-950">
-        <span className="text-gray-400 text-sm animate-pulse">Loading profile…</span>
+        <span className="text-gray-400 text-sm animate-pulse">
+          Loading profile…
+        </span>
       </div>
     );
   }
@@ -73,7 +75,6 @@ const ProfilePage = () => {
   return (
     <main className="min-h-screen flex items-center justify-center bg-neutral-950 text-white px-4">
       <div className="w-full max-w-md p-6 rounded-2xl bg-white/5 border border-white/10 space-y-6">
-
         {/* Avatar + Name */}
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-lg font-bold shrink-0">
@@ -81,7 +82,9 @@ const ProfilePage = () => {
           </div>
           <div>
             <h1 className="text-xl font-semibold">{profile.name}</h1>
-            <p className="text-sm text-gray-400">{profile.email}</p>
+            <p className="text-sm text-gray-400 truncate max-w-50">
+              {profile.email}
+            </p>
           </div>
         </div>
 
@@ -89,7 +92,6 @@ const ProfilePage = () => {
         <div className="border-t border-white/10 pt-4 space-y-3">
           <Row label="User ID" value={profile.id} />
         </div>
-
       </div>
     </main>
   );

@@ -40,7 +40,7 @@ const Login = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="w-full max-w-md p-6 rounded-2xl bg-white/5 border border-white/10 space-y-4"
       >
-        <h1 className="text-2xl font-semibold">Login</h1>
+        <h1 className="text-2xl font-semibold">შესვლა</h1>
 
         {/* Email */}
         <div>
@@ -88,6 +88,9 @@ const Login = () => {
         >
           {mutation.isPending ? "Loading..." : "Login"}
         </button>
+        <div className="w-full items-center justify-center text-center">
+          <button className="text-sm text-blue-400 underline cursor-pointer" onClick={()=>router.push('/register')}>არ გაქვს ექაუნთი ?</button>
+        </div>
       </form>
     </div>
   );

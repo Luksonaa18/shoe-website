@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import shoe from "@/public/shoe.png";
+import ProductsPage from "../products/page";
 
 const HomePage = () => {
   const cardRefs = useRef<HTMLDivElement[]>([]);
@@ -291,6 +292,7 @@ const HomePage = () => {
           </div>
         ))}
       </div>
+      <ProductsPage/>
     </div>
   );
 };
