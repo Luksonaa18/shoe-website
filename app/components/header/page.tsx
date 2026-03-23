@@ -25,7 +25,7 @@ const Header = () => {
   }, [isOpen]);
 
   const navItems = [
-    { href: "/home", label: "მთავარი", num: "01" },
+    { href: "/", label: "მთავარი", num: "01" },
     { href: "/profile", label: "პროფილი", num: "02" },
     { href: "/about", label: "ჩვენს შესახებ", num: "03" },
   ];
