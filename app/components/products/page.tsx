@@ -36,12 +36,11 @@ const ProductsPage = () => {
     cardRefs.current.forEach((card) => {
       gsap.fromTo(
         card,
-        { opacity: 0, x: -80, scale: 0.92 ,scaleX:0.88},
+        { opacity: 0, x: -80, scale: 0.92 },
         {
           opacity: 1,
           x: 0,
           scale: 1,
-          scaleX:1,
           duration: 0.55,
           ease: "power3.out",
           scrollTrigger: {
