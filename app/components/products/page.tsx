@@ -4,8 +4,11 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchProducts, removeProduct } from "../../helpers/products";
 import { Product } from "../../type/product-cart";
 import { useAuthStore } from "@/auth-store";
-
+import { gsap } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect, useRef } from "react";
 const ProductsPage = () => {
+  const cardRefs = useRef<HTMLDivElement[]>([]);
   const {
     data: products,
     isLoading,
@@ -17,6 +20,39 @@ const ProductsPage = () => {
     queryFn: fetchProducts,
     staleTime: 1000 * 60 * 5, // 5 minutes
   });
+
+  // helper to add refs
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !cardRefs.current.includes(el)) {
+      cardRefs.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    if (!products) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    cardRefs.current.forEach((card) => {
+      gsap.fromTo(
+        card,
+        { opacity: 0, x: -80, scale: 0.92 ,scaleX:0.88},
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          scaleX:1,
+          duration: 0.55,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+    });
+  }, [products]);
   const queryClient = useQueryClient();
   const user = useAuthStore((state) => state.user);
 
@@ -58,6 +94,7 @@ const ProductsPage = () => {
       {products?.map((product) => (
         <div
           key={product.id}
+          ref={addToRefs}
           className="flex flex-col bg-white/5 border border-white/10 rounded-xl overflow-hidden text-white hover:scale-105 transition-transform duration-200 relative"
         >
           {user?.role === "admin" && (
